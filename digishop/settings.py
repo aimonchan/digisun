@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-*7d)sly+(9an7tocz75eo6v@mh%@a@*+7rdw_0g15ifes8_7l$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ['.vercel.app']
+#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -107,10 +107,17 @@ WSGI_APPLICATION = 'digishop.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'defaultdb',
+        'USER': 'avnadmin',
+        'PASSWORD': 'AVNS_rV_VESpxeJug9NSZr_o',
+        'HOST':'freedbaiven-digitest.d.aivencloud.com',
+        'PORT':'24465',
     }
 }
+
 
 
 # Password validation
